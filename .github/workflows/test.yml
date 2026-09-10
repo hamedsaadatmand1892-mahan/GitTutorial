@@ -44,6 +44,9 @@ jobs:
           echo "Application: $APP_NAME"
           echo "Environment: $ENVIRONMENT"
 
+      - name: Show variable
+        run: echo "Application version is ${{ vars.APP_VERSION }}
+
       - name: Build project
         run: echo "Building project..."
 

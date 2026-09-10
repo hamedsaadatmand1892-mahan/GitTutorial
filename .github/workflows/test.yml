@@ -9,6 +9,10 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
+    env:
+      APP_NAME: DevOpsProject
+      ENVIRONMENT: test
+
     steps:
       - name: Get repository
         uses: actions/checkout@v4
@@ -29,6 +33,11 @@ jobs:
 
       - name: Check file content
         run: grep "Devops Git project" test.txt
+
+      - name: Show environment
+        run: |
+          echo "Application: $APP_NAME"
+          echo "Environment: $ENVIRONMENT"
 
       - name: Build project
         run: echo "Building project..."

@@ -18,6 +18,12 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Install pytest
+        run: pip install pytest
+
+      - name: Run tests
+        run: pytest
+
       - name: Check test file
         run: test -f test.txt
 

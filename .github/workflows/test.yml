@@ -1,4 +1,4 @@
-name: My First Action
+name: Test Project
 
 on:
   push:
@@ -9,8 +9,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Say Hello
-        run: echo "Hello from GitHub Actions!"
+      - name: Get repository
+        uses: actions/checkout@v4
 
-      - name: Check Git
-        run: git --version
+      - name: Check test file
+        run: test -f test.txt
+
+      - name: Show file
+        run: cat test.txt

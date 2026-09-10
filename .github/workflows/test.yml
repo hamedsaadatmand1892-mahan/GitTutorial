@@ -17,7 +17,7 @@ jobs:
         run: test -f test.txt
 
       - name: Check file content
-        run: grep "DevOps Git Project" test.txt
+        run: grep "Devops Git project" test.txt
 
       - name: Build project
         run: echo "Building project..."

@@ -16,7 +16,7 @@ jobs:
     steps:
       - name: Test secret
         run: echo "Secret is $MY_SECRET"
-        env:
+     env:
         MY_SECRET: ${{ secrets.MY_SECRET }}
 
       - name: Get repository
